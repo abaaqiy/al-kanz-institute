@@ -96,7 +96,6 @@ export function HowItWorksPage() {
 
 // --- TUTORS PAGE ---
 export function TutorsPage() {
-  // Using an array to track individual expanded states
   const [expandedIndices, setExpandedIndices] = useState<number[]>([]);
   const [teacherEmail, setTeacherEmail] = useState("");
 
@@ -112,7 +111,7 @@ export function TutorsPage() {
           <br/><br/>
           He memorised the Qur'an at <strong>Al-Madrasatul Islamiyyah Al-Mithaliyyah (المدرسة الإسلامية المثالية), Kubwa, Abuja, Nigeria</strong>. He completed his Junior Secondary (I'daadiy - إعدادي) and Senior Secondary (Thanawiy - ثانوي) studies in Arabic at <strong>Mahdu Najah Al-Islamiy (معهد نجاح الإسلامي), Ibadan, Oyo State, Nigeria</strong>, where he also furthered his Islamic and Arabic learning. He has also attended various Dawrahs and learnt from numerous scholars both offline and online.
           <br/><br/>
-          With meaningful years of teaching experience across both offline and online learning environments, he is passionate about imparting authentic Qur'anic knowledge, nurturing proper recitation, and helping learners develop a strong, lasting relationship with the Book of Allah.
+          Currently, he is pursuing a degree in <strong>Software Engineering at Obafemi Awolowo University, Ile-Ife, Osun State, Nigeria</strong>. With meaningful years of teaching experience across both offline and online learning environments, he is passionate about imparting authentic Qur'anic knowledge, nurturing proper recitation, and helping learners develop a strong, lasting relationship with the Book of Allah.
         </>
       ), 
       initials: "AS" 
@@ -128,14 +127,13 @@ export function TutorsPage() {
           <br/><br/>
           He memorised the Qur'an at <strong>Al-Madrasatul Islamiyyah Al-Mithaliyyah (المدرسة الإسلامية المثالية), Kubwa, Abuja, Nigeria</strong>. He completed his Junior Secondary (I'daadiy - إعدادي) and Senior Secondary (Thanawiy - ثانوي) studies in Arabic at <strong>Mahdu Najah Al-Islamiy (معهد نجاح الإسلامي), Ibadan, Oyo State, Nigeria</strong>, where he also furthered his Islamic and Arabic learning. He has also attended various Dawrahs and learnt from numerous scholars both offline and online.
           <br/><br/>
-          He is also a continuing student of Qira'at and Riwayat, and has notably participated and won various prizes in Qur'an Recitation Competitions. With meaningful years of teaching experience across offline and online environments, he is dedicated to helping learners develop a lasting relationship with the Book of Allah.
+          Currently, he is pursuing a degree in <strong>Economics at the University of Ibadan, Oyo State, Nigeria</strong>. He is also a continuing student of Qira'at and Riwayat, and has notably participated and won various prizes in Qur'an Recitation Competitions. With meaningful years of teaching experience across offline and online environments, he is dedicated to helping learners develop a lasting relationship with the Book of Allah.
         </>
       ), 
       initials: "MS" 
     }
   ];
 
-  // Toggles individual index in the array
   const toggleReadMore = (index: number) => {
     if (expandedIndices.includes(index)) {
       setExpandedIndices(expandedIndices.filter(i => i !== index));
