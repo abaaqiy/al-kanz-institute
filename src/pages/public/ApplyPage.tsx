@@ -231,24 +231,26 @@ export default function ApplyPage() {
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm font-medium mb-1.5">First Name</label>
-                    <input {...register("firstName")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest" placeholder="Aisha" />
+                    {/* Removed placeholder */}
+                    <input {...register("firstName")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest" />
                     {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1.5">Last Name</label>
-                    <input {...register("lastName")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest" placeholder="Bello" />
+                    {/* Removed placeholder */}
+                    <input {...register("lastName")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest" />
                     {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName.message}</p>}
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1.5">Email Address</label>
-                  <input type="email" {...register("email")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest" placeholder="aisha@example.com" />
+                  {/* Removed placeholder */}
+                  <input type="email" {...register("email")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest" />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
                 </div>
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm font-medium mb-1.5">Country</label>
-                    {/* Changed to a SELECT dropdown */}
                     <select {...register("country")} className="w-full px-3.5 py-3 border border-sage rounded-input focus:outline-none focus:border-emerald-forest bg-white">
                       <option value="">Select your country...</option>
                       {countries.map((c) => (
