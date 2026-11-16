@@ -5,6 +5,7 @@ import Button from "../../components/ui/Button";
 import Card from "../../components/ui/Card";
 import SiteFooter from "../../components/layout/SiteFooter";
 import Logo from "../../components/ui/Logo";
+import CohortCountdown from "../../components/ui/CohortCountdown";
 
 const programmes = [
   { icon: BookOpen, title: "Hifdhul-Qur'an", desc: "Structured memorisation programmes designed to help students memorise the Qur'an with accuracy, consistency and proper recitation.", status: "available" },
@@ -51,10 +52,10 @@ export default function HomePage() {
           />
         </div>
 
+        {/* HEADER */}
         <header className="relative z-50 w-full border-b border-white/10">
           <div className="container-app h-20 flex items-center justify-between">
             
-            {/* Reduced Logo Size to h-12 */}
             <Logo 
               className="h-12 w-auto" 
               textColor="text-white" 
@@ -98,6 +99,11 @@ export default function HomePage() {
             </div>
           </div>
         </header>
+
+        {/* COUNTDOWN BANNER (Below header, dark mode enabled) */}
+        <div className="relative z-40">
+          <CohortCountdown darkMode={true} />
+        </div>
 
         {/* Mobile Side Navigation */}
         {isMobileMenuOpen && (

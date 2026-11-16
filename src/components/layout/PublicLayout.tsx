@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Button from "../ui/Button";
 import SiteFooter from "./SiteFooter";
 import Logo from "../ui/Logo";
+import CohortCountdown from "../ui/CohortCountdown";
 
 export default function PublicLayout() {
   const location = useLocation();
@@ -22,13 +23,12 @@ export default function PublicLayout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ivory">
+      {/* HEADER */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-sage">
         <div className="container-app h-20 flex items-center justify-between">
           
-          {/* Removed hideText, allowing the component to render the text */}
           <Logo className="h-12 w-auto" />
 
-          {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-5 text-[13px] font-medium">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -57,7 +57,6 @@ export default function PublicLayout() {
               <Button variant="primary" className="whitespace-nowrap px-5 py-2.5">Enrol Now</Button>
             </Link>
 
-            {/* Mobile Menu Toggle */}
             <button 
               className="xl:hidden p-2 text-emerald-deep hover:bg-sage/50 rounded-lg transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -67,6 +66,9 @@ export default function PublicLayout() {
           </div>
         </div>
       </header>
+
+      {/* COUNTDOWN BANNER (Placed below header) */}
+      <CohortCountdown />
 
       {/* Mobile Side Navigation */}
       {isMobileMenuOpen && (
@@ -78,7 +80,6 @@ export default function PublicLayout() {
           
           <div className="absolute top-0 right-0 w-[280px] h-full bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
             <div className="p-5 flex items-center justify-between border-b border-sage">
-              {/* Removed hideText here as well */}
               <Logo className="h-10 w-auto" />
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
