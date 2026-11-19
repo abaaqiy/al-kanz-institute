@@ -6,6 +6,7 @@ import Card from "../../components/ui/Card";
 import SiteFooter from "../../components/layout/SiteFooter";
 import Logo from "../../components/ui/Logo";
 import CohortCountdown from "../../components/ui/CohortCountdown";
+import WhatsAppButton from "../../components/ui/WhatsAppButton";
 
 const programmes = [
   { icon: BookOpen, title: "Hifdhul-Qur'an", desc: "Structured memorisation programmes designed to help students memorise the Qur'an with accuracy, consistency and proper recitation.", status: "available" },
@@ -100,7 +101,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        {/* COUNTDOWN BANNER (Below header, dark mode enabled) */}
+        {/* COUNTDOWN BANNER */}
         <div className="relative z-40">
           <CohortCountdown darkMode={true} />
         </div>
@@ -270,6 +271,9 @@ export default function HomePage() {
       </main>
 
       <SiteFooter />
+
+      {/* FLOATING WHATSAPP BUTTON */}
+      <WhatsAppButton />
     </div>
   );
 }

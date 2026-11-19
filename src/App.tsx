@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppRoutes from "./routes/AppRoutes";
+import WhatsAppButton from "./components/ui/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -9,6 +10,9 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <AppRoutes />
+        
+        {/* Global Floating WhatsApp Button */}
+        <WhatsAppButton />
       </BrowserRouter>
     </QueryClientProvider>
   );

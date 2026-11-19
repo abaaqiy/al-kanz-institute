@@ -67,7 +67,7 @@ export default function PublicLayout() {
         </div>
       </header>
 
-      {/* COUNTDOWN BANNER (Placed below header) */}
+      {/* COUNTDOWN BANNER */}
       <CohortCountdown />
 
       {/* Mobile Side Navigation */}
@@ -126,6 +126,7 @@ export default function PublicLayout() {
       </main>
 
       <SiteFooter />
+
     </div>
   );
 }
