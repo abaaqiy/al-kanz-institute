@@ -23,7 +23,6 @@ export default function PublicLayout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ivory">
-      {/* HEADER */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-sage">
         <div className="container-app h-20 flex items-center justify-between">
           
@@ -67,7 +66,6 @@ export default function PublicLayout() {
         </div>
       </header>
 
-      {/* COUNTDOWN BANNER */}
       <CohortCountdown />
 
       {/* Mobile Side Navigation */}
@@ -126,7 +124,6 @@ export default function PublicLayout() {
       </main>
 
       <SiteFooter />
-
     </div>
   );
 }

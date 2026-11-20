@@ -6,7 +6,7 @@ import Card from "../../components/ui/Card";
 import SiteFooter from "../../components/layout/SiteFooter";
 import Logo from "../../components/ui/Logo";
 import CohortCountdown from "../../components/ui/CohortCountdown";
-import WhatsAppButton from "../../components/ui/WhatsAppButton";
+import DateDisplay from "../../components/ui/DateDisplay";
 
 const programmes = [
   { icon: BookOpen, title: "Hifdhul-Qur'an", desc: "Structured memorisation programmes designed to help students memorise the Qur'an with accuracy, consistency and proper recitation.", status: "available" },
@@ -194,7 +194,13 @@ export default function HomePage() {
         <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-ivory to-transparent z-20 pointer-events-none" />
       </div>
 
-      <main className="flex-1 bg-ivory relative z-30 pt-16">
+      <main className="flex-1 bg-ivory relative z-30">
+        
+        {/* ELEGANT OVERLAPPING DATE DISPLAY */}
+        <section className="container-app relative z-40 -mt-16 mb-20 px-4">
+          <DateDisplay />
+        </section>
+
         <section className="container-app pb-20 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif text-emerald-deep mb-6">More Than Learning. A Journey of Growth.</h2>
@@ -271,9 +277,6 @@ export default function HomePage() {
       </main>
 
       <SiteFooter />
-
-      {/* FLOATING WHATSAPP BUTTON */}
-      <WhatsAppButton />
     </div>
   );
 }
